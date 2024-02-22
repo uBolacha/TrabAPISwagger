@@ -34,6 +34,7 @@ server.delete('/games/:id', (req, res) => {
     }
 });
 
+// aparece os bagui 
 server.post('/games', (req, res) => {
     const novoJogo = req.body;
 

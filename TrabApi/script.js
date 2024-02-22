@@ -2,7 +2,7 @@ const gamesForm = document.getElementById('games-form');
 const gamesList = document.getElementById('games-list');
 const gamesDetails = document.getElementById('games-details'); 
 const updategamesForm = document.getElementById('update-games-form');  
-
+// faz aparecer o djabo dos jogo
 function listgames() {
     fetch('http://localhost:5000/games')
         .then(response => response.json())
@@ -33,10 +33,13 @@ function listgames() {
         .catch(error => console.error('Erro:', error));
 }
 
+//edita os jogo
+
 function showgamesDetails(gamesId) {
     window.location.href = `editarJogo.html?id=${gamesId}`; 
 }
 
+//deleta os jogo
 function deletegames(gamesId) {
     fetch(`http://localhost:5000/games/${gamesId}`, {
         method: 'DELETE',
@@ -56,6 +59,7 @@ function deletegames(gamesId) {
     .catch(error => console.error('Erro:', error));
 }
 
+// envia as alteraçoes dos jogo
 gamesForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const name = document.getElementById('name').value;
