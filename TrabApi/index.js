@@ -6,6 +6,7 @@ const server = express();
 server.use(cors());
 server.use(express.json());
 
+// bagui do swagg 
 const swagger = require('swagger-ui-express')
 const swaggerPath = require('./swagger.json')
 
@@ -43,7 +44,7 @@ server.post('/games', (req, res) => {
         dados.games.push(novoJogo);
         salvarDados(dados);
 
-        return res.status(201).json({ mensagem: "cadastro feito com sucesso!" });
+        return res.status(201).json({ mensagem: "jogo cadastrado!" });
     }
 });
 

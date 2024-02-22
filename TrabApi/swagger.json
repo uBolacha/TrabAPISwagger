@@ -76,7 +76,7 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Usuario"
+                                "$ref": "#/components/schemas/Games"
                             }
                         }
                     }
@@ -115,15 +115,20 @@
     },
     "components": {
         "schemas": {
-            "Usuario": {
+            "Games": {
                 "type": "object",
                 "properties": {
                     "nome": {
                         "type": "string"
                     },
-                    "email": {
-                        "type": "string",
-                        "format": "email"
+                    "developer": {
+                        "type": "string"
+                    },
+                    "genero":{
+                        "type":"string"
+                    },
+                    "imagem":{
+                        "type":"string"
                     }
                 }
             }

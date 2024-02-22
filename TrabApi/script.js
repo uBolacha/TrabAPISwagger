@@ -1,7 +1,7 @@
 const gamesForm = document.getElementById('games-form');
 const gamesList = document.getElementById('games-list');
-const gamesDetails = document.getElementById('games-details');  // Adicionado
-const updategamesForm = document.getElementById('update-games-form');  // Adicionado
+const gamesDetails = document.getElementById('games-details'); 
+const updategamesForm = document.getElementById('update-games-form');  
 
 function listgames() {
     fetch('http://localhost:5000/games')
@@ -17,12 +17,12 @@ function listgames() {
                         <img src="${games.imagem}" alt="${games.nome} Image">
                     </div>
                     <div class="games-info">
-                       <div id="text-games">Nome: ${games.nome}</div>
+                        <div id="text-games">Nome: ${games.nome}</div>
                         <div id="text-games">Developer: ${games.developer}</div>
                         <div id="text-games">Gênero: ${games.genero}</div>
                     </div>
                     <div class="games-buttons">
-                        <button class="details-button" onclick="showgamesDetails(${games.id})">Detalhes</button>
+                        <button class="details-button" onclick="showgamesDetails(${games.id})">Editar</button>
                         <button class="delete-button" onclick="deletegames(${games.id})">Excluir</button>
                     </div>
                 `;
