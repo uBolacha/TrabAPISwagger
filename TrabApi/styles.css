@@ -1,0 +1,203 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff; 
+    color: black; 
+    margin: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#games-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+}
+
+.games-list-item {
+    display: flex;
+    padding: 15px;
+    background-color: #212121; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.games-image {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.games-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    display: block;
+}
+
+.games-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+    
+}
+.games-info #text-games{
+   margin-top: 5px;    
+}
+.games-buttons {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.details-button,
+.delete-button {
+    background-color: black;  
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    font-size: 14px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s, border-radius 0.3s;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+
+
+.details-button:hover,
+.delete-button:hover {
+    background-color: black;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(93, 93, 93, 0.4);
+}
+
+#games-form,
+#edit-game-form,
+#update-games-form {
+    margin-bottom: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Botão Estilizado */
+button {
+    background-color: black;  
+    color: #fff;
+    border: none;
+    padding: 8px 14px;
+    font-size: 14px; 
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s, box-shadow 0.3s, border-radius 0.3s;
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+
+
+button:hover {
+    background-color: black;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0px 8px 15px rgba(93, 93, 93, 0.4);
+}
+
+#games-form input,
+#edit-game-form input,
+#update-games-form input,
+#games-details input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 5px;
+    background-color: #ecececb5;
+    color: #000000;
+    box-sizing: border-box;
+}
+
+
+#games-form button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+#games-list {
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    max-width: 600px;
+}
+
+#games-list li {
+    padding: 15px;
+    background-color: #ecececb5; 
+    border-radius: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    -webkit-box-shadow: 14px 17px 5px -2px rgba(0, 0, 0, 0.598);
+    -moz-box-shadow: 14px 17px 5px -2px rgba(0, 0, 0, 0.637);
+    box-shadow: 14px 17px 5px -2px rgba(0, 0, 0, 0.626);
+}
+
+#games-details {
+    display: none;
+    width: 100%;
+    max-width: 400px;
+}
+
+#games-details input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #212121; 
+    color: #ffffff;
+    box-sizing: border-box;
+}
+
+#games-details img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+#games-details form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+display: flex;
+gap: 125px;
+}
+.forms-title{
+margin-left: 20px;}
+
+.forms-title h1{
+display: flex;
+
+justify-content: center;
+
+}

@@ -1,0 +1,132 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API de Jogos",
+        "version": "1.0.0",
+        "description": "API para cadastro de jogos"
+    },
+    "paths": {
+        "/games": {
+            "get": {
+                "summary": "Obter a lista de jogos",
+                "responses": {
+                    "200": {
+                        "description": "Lista de jogos retornada com sucesso"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Cadastra um novo jogo ",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Games"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Jogo cadastrado com sucesso"
+                    },
+                    "400": {
+                        "description": "informações incompletas"
+                    }
+                }
+            }
+        },
+        "/games/{id}": {
+            "get": {
+                "summary": "Obter informações de um jogo pelo ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Informações do jogo retornadas com sucesso"
+                    },
+                    "404": {
+                        "description": "jogo não encontrado"
+                    }
+                }
+            },
+            "put": {
+                "summary": "Atualizar informações de um jogo pelo ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Usuario"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Informações do jogo atualizadas com sucesso"
+                    },
+                    "404": {
+                        "description": "jogo não encontrado"
+                    }
+                }
+            },
+            "delete": {
+                "summary": "Excluir um jogo pelo ID",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "jogo excluído com sucesso"
+                    },
+                    "404": {
+                        "description": "jogo não encontrado"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "Usuario": {
+                "type": "object",
+                "properties": {
+                    "nome": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    }
+                }
+            }
+        }
+    }
+}

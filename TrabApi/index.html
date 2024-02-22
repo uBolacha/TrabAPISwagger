@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API de Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main>
+    <div class="container">
+    <div class="forms-title">
+    <h1>Joguinhos</h1>
+    
+    <!-- Formulário para adicionar música -->
+    <form id="games-form">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" required>
+        
+        <label for="developer">Developer:</label>
+        <input type="text" id="developer" required>
+        
+        <label for="genre">Gênero:</label>
+        <input type="text" id="genre" required>
+
+        <label for="image">URL da Imagem:</label>
+        <input type="text" id="image" required>
+    
+        <button type="submit">Add Jogo</button>
+    </form>
+</div>
+    <div>
+    <h1>Lista de Jogos</h1>
+    <ul id="games-list" class="games-list"></ul>
+    
+    <script src="script.js"></script>
+</div>
+</div>
+</main>
+</body>
+</html>
